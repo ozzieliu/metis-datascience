@@ -35,44 +35,46 @@ As an extension, consider what class of problem this exercise represents. Can yo
 
 import matplotlib.pyplot as plt
 
-## Attempt 1
-"""
-total = 1000
-candidate = 0
-graphlist = []
+## Approach 1 - straight forward calculation
+def attempt1():
+    total = 1000
+    candidate = 0
+    graphlist = []
 
-def find_candidate(number):
-    global total
-    global candidate
-    result = (2-number)**2 + (7-number)**2 + (1-number)**2 + (5-number)**2 + (10-number)**2
-    graphlist.append(result)
-    if result < total:
-        total = result
-        candidate = number
+    def find_candidate(number):
+        global total
+        global candidate
+        result = (2-number)**2 + (7-number)**2 + (1-number)**2 + (5-number)**2 + (10-number)**2
+        graphlist.append(result)
+        if result < total:
+            total = result
+            candidate = number
 
-x = [float(j) / 10 for j in range(0, 101, 1)]
-for i in x:
-    find_candidate(i)
+    x = [float(j) / 10 for j in range(0, 101, 1)]
+    for i in x:
+        find_candidate(i)
 
-print total
-print candidate
+    print total
+    print candidate
 
-plt.plot(x,graphlist)
-plt.show()
-"""
+    plt.plot(x,graphlist)
+    plt.show()
+
 
 ## Attempt 2: more concise
-y = []
-def test(number):
-    data = [2,7,1,5,10]
-    result = sum([float(i-number)**2 for i in data])
-    y.append(result)
-    return result
+def attempt2():
+    y = []
+    ## helper function to run the calculations
+    def test(number):
+        data = [2,7,1,5,10]
+        result = sum([float(i-number)**2 for i in data])
+        y.append(result)
+        return result
 
-x = [float(j) / 10 for j in range(0, 101, 1)]
-results = {candidate:test(candidate) for candidate in x}
+    x = [float(j) / 10 for j in range(0, 101, 1)]
+    results = {candidate:test(candidate) for candidate in x}
 
-print "Candidate: %r. Value: %r" %(min(results, key = results.get), min(results.values()))
+    print "Candidate: %r. Value: %r" %(min(results, key = results.get), min(results.values()))
 
-plt.plot(x,y)
-plt.show()
+    plt.plot(x,y)
+    plt.show()

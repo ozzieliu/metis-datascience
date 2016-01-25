@@ -21,6 +21,9 @@ Here are examples to test your function with:
 (()()))(() should return False
 """
 
+## Strategy here is to use a stack data structure. Adding to the stack at occurence
+## of ( and popping off at ). If stack is not empty, there's an imbalance.
+
 def check_balance(parens):
     stack = []
     for i in parens:
