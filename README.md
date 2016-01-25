@@ -24,7 +24,7 @@ Investigation folder.
 
 #### [Challenges](https://github.com/ozzieliu/metis-datascience/tree/master/Challenges)
 Challenges are problem sets on topics that we're learning about.  
-Challenge 1 is an exploratory data analysis on the MTA's public turnstile data.
+Challenge 1 is an exploratory data analysis on the MTA's public turnstile data.  
 Challenge 2 uses Pandas to analyze movie box office data.
 
 
