@@ -29,5 +29,4 @@ had?
 
 - **presentation.html** - Presentation in HTML format. [Click here to view in browser](http://ozzieliu.github.io/web/ebertron-presentation.html).
 - **Ebertron-Presentation.md** - Raw presentation in Markdown format
-- For complete code, approach, and raw files, please see my personal [Github Repository](https://github.com/ozzieliu/metis-datascience/tree/master/Projects/02-Movies-Project-Luther)
 - Project write up is also available on my [blog](http://ozzieliu.com/2016/01/31/roger-ebertron/)
