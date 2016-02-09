@@ -1,7 +1,7 @@
 """
 Pair Problem - 2/4/2016
 Ozzie with Thomas
-
+---
 Write a function to calculate factorials, and accompanying unit tests.
 """
 
